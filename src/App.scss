@@ -1,0 +1,85 @@
+@use './scss/nullstyle.scss';
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .app {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .movie-row {
+    margin: 20px 0;
+  }
+  
+  .row-title {
+    font-size: 24px;
+    margin: 30px 20px;
+  }
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .movie-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .movie-card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+    transition: filter 0.3s;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-card:hover img {
+    filter: brightness(0.7);
+  }
+  
+  .movie-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .search-bar {
+    position: relative;
+  }
+  
+  .suggestions {
+    position: absolute;
+    top: 100%; /* Makes it appear directly below the search bar */
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 10; /* Ensures it appears above other page elements */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .suggestions .MuiListItem-root {
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .suggestions .MuiListItem-root:hover {
+    background-color: #f0f0f0;
+  }
